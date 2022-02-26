@@ -1,0 +1,41 @@
+body{
+    background-color: #2a0f0f;
+    color: #f55961;
+    text-align: center;
+}
+#countries{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.country{
+    background-image: linear-gradient(#2a0f0f,#613b3b);
+    color: rgb(187, 116, 122);
+    /* border: 2px solid rgb(90, 190, 81); */
+    font-weight: 600;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 15px;
+    
+}
+.country:hover{
+    transform: scale(1.02);
+    background-image: linear-gradient(#613b3e,#2a0f13);
+}
+
+#detail-btn{
+    background-image: linear-gradient(#2a0f0f,#613b3b);
+    padding: 0px 5px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#detail-btn:hover{
+    background-image: linear-gradient(#613b3b,#2a0f0f);
+    font-weight: 600;
+}
+
+#link{
+    text-decoration: none;
+    color: #f55961;
+    
+    
+}
