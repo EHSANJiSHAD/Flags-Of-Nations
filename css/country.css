@@ -1,6 +1,6 @@
 body{
-    background-color: #2a0f0f;
-    color: #f55961;
+    background-color: #0f182a;
+    color: #5963f5;
     text-align: center;
 }
 #countries{
@@ -8,34 +8,173 @@ body{
     grid-template-columns: repeat(3,1fr);
 }
 .country{
-    background-image: linear-gradient(#2a0f0f,#613b3b);
-    color: rgb(187, 116, 122);
+   
+    color: rgb(116, 135, 187);
     /* border: 2px solid rgb(90, 190, 81); */
+    background-color: transparent;
     font-weight: 600;
-    margin: 10px;
+    margin:10px 5px; 
     padding: 5px;
     border-radius: 15px;
+    box-shadow: -5px -5px 10px #5963f5 , -10px -10px 20px #4f56b1;
+    transition: .5s;
     
 }
 .country:hover{
+
     transform: scale(1.02);
-    background-image: linear-gradient(#613b3e,#2a0f13);
+    box-shadow: -10px -10px 20px #5963f5 , -20px -20px 40px #4f56b1;
+    /* background-image: linear-gradient(#3b4161,#0f152a); */
 }
 
+
+/* button style starts  */
+.btn{
+    position: relative;
+    left: 38%;
+    width: 90px;
+    height: 85px;
+    font-weight: 500;
+    text-align: center;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: -5px -5px 8px #5963f5, 5px 5px 10px #4f56b1;
+    color: #4f56b1;
+}
+.btn:hover{
+    box-shadow: -20px -20px 45px #5963f5, 20px 20px 45px #4f56b1;
+    transform: scale(1.02);
+    color: #4f56b1;
+    font-weight: 500;
+}
+
+.logo-clr{
+    color: #4f56b1;
+}
+/* button style ends  */
+
+/* search box style starts  */
+.search-box{
+    width: 500px;
+    height: 60px;
+    transform: translate(-1%,90%);
+}
+
+.search-box button{
+    border: none;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    /* background-color: rgb(116, 135, 187); */
+    background-color: transparent;
+    border-radius: 50%;
+    width: 60px;
+    font-size: 23px;
+    line-height: 60px;
+    height: 60px;
+    box-shadow: -5px -5px 10px 2px #5963f5, 10px 10px 25px 2px #4f56b1;
+    color: gray;
+    transition: .5s;
+}
+.search-box button:hover{
+    box-shadow: -10px -10px 15px #5963f5, 10px 10px 15px #4f56b1;
+    transform: scale(1.2);
+}
+
+
+.search-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: gray;
+    box-shadow: -10px -10px 15px #5963f5, 10px 10px 15px #4f56b1;
+    border-radius: 30px;
+    outline: none;
+    font-size: 19px;
+    padding-left: 20px;
+    transition: .5s;
+}
+.search-box input:focus{
+    box-shadow: -20px -20px 40px #5963f5, 20px 20px 40px #4f56b1;
+}
+/* search box style ends  */
+
 #detail-btn{
-    background-image: linear-gradient(#2a0f0f,#613b3b);
+    /* background-image: linear-gradient(#0f162a,#3b4261); */
+    background-color: transparent;
     padding: 0px 5px;
     font-weight: 600;
+    border: none;
     border-radius: 5px;
+    box-shadow: -5px -5px 10px #314e88 , -10px -10px 20px #16223b;
+    transition: .5s;
 }
 #detail-btn:hover{
-    background-image: linear-gradient(#613b3b,#2a0f0f);
+    /* background-image: linear-gradient(#3b4261,#0f132a); */
     font-weight: 600;
+    box-shadow: -5px -5px 15px #314e88 , -15px -15px 50px #16223b;
+    transform: scale(1.02);
 }
 
 #link{
     text-decoration: none;
-    color: #f55961;
+    color: #598af5;
     
+    
+}
+
+/* loader style  */
+.loader{
+    display: none;
+    margin-top: 20px;
+}
+/* spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+  }
+  .spinner div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 8px solid transparent;
+    border-top-color:#353a80;
+    border-radius: 50%;
+    animation: spinnerOne 1.2s linear infinite;
+  }
+  .spinner div:nth-child(2) {
+    border: 8px solid transparent;
+    border-bottom-color: rgb(116, 135, 187);
+    animation: spinnerTwo 1.2s linear infinite;
+  }
+  
+  @keyframes spinnerOne {
+    0% { transform: rotate(0deg); border-width: 10px; }
+    50% { transform: rotate(180deg); border-width: 1px; }
+    100% { transform: rotate(360deg); border-width: 10px; }
+  }
+  @keyframes spinnerTwo {
+    0% { transform: rotate(0deg); border-width: 1px; }
+    50% { transform: rotate(180deg); border-width: 10px; }
+    100% { transform: rotate(360deg); border-width: 1px; }
+  }
+
+
+  @media only screen and (min-width:377px) and (max-width:560px) {
+      #countries{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+      }
+      
+  }
+
+  @media only screen and (max-width:376px) {
+    #countries{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
     
 }

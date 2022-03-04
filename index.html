@@ -4,26 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countries</title>
+    <title>FLAGS  OF  NATIONS</title>
+
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- css link  -->
     <link rel="stylesheet" href="css/country.css">
+
+    <!-- fontawesome kit -->
+    <script src="https://kit.fontawesome.com/745fb418cf.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
     
 
    
-    <h1 id="top" class="country">COUNTRIES</h1>
+    <h1 id="top" class="country">FLAGS  OF  NATIONS</h1>
+
+    <!-- search section starts  -->
+    <section class="container d-flex  justify-content-center mb-5">
+
+        <div class="search-box mb-5">
+            <input id="input-field" type="text" placeholder="SEARCH...">
+            <button id="search-btn" onclick="searchedCountry()"><i class="fas fa-search logo-clr"></i></button>
+        </div>
+
+    </section>
+    <!-- search section ends  -->
     
     <div id="country-detail">
     
     </div>
+     <!-- loader  -->
+
+      <div id="loader" class="spinner position-relative start-50 top-50 translate-middle-x mt-5 mb-5">
+        <div></div>
+        <div></div>
+      </div>
 
     <div id="countries">
 
     </div>
+
+    <div id="single-country">
+        
+    </div>
     
+     <!-- bootstrap script  -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script src="js/countries.js"></script>
 </body>
