@@ -14,11 +14,15 @@ loadCountries();
 const searchedCountry = () => {
     document.getElementById('loader').style.display = 'block';
 
-    const searchText = document.getElementById('input-field').value;
+    const inputField = document.getElementById('input-field');
+    const searchText = inputField.value;
 
     fetch(`https://restcountries.com/v3.1/name/${searchText}`)
         .then(res => res.json())
         .then(data => displayCountries(data))
+
+        inputField.value = '';
+        
 }
 
 // displayCountries(data)
